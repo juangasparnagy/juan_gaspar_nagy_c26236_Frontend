@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="icon" href="../img/icon2.png">
+        <title>E-Shop</title>
+    </head>
+    <body>
+        <header id="paheader" class="header">
+            <a href="../index.html"><div class="logo-container"><img src="../img/LogoTemp2.png" alt="Logo"></div></a>
+            
+            <!-- USO DIVS adentro de li para que sea más fácil clickear o usar la llema del dedo,
+            dispensando de presición.
+            
+            Si alcanza el tiempo hacer la nav con divs, sin ul para que ocupen
+            todo el ancho visual -->
+                <nav class="miNav">
+                    <ul>
+                        <li><a href="../index.html"><div class="miNavDiv">Inicio</div></a></li>
+                        <li><a href="./products.html"><div class="miNavDiv">Productos</div></a></li>
+                        <li><a href="./contact.html"><div class="miNavDiv">Contacto</div></a></li>
+                        <li><a href="./about.html"><div class="miNavDiv">Quienes somos</div></a></li>
+                        <li><a href="./job.html"><div class="miNavDiv">Trabaja con nosotros</div></a></li>
+                        <li><a href="./testdetailsnojs.html"><div class="miNavDiv">Test Sin JS</div></a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <main id="main">
+            <section class="inicio">
+                <h1> </h1>
+                <p> Esta es una prueba para ver si es posible mostrar algo parecido a un cuadro emergente con detalles sin usar nada de JavaScript</p>
+                <p> La idea es utilizar sólo html y css. </p>
+                <p> <strong>Entiéndase</strong> que no es la forma correcta de hacerlo en una página de producción ya que
+                se volvería extremadamente complicado ajustar con css cada delemento cuando cambian las posiciones y los tamaños
+                de los elementos. </p>
+
+    
+                <p> Esto sólo se realizó como un reto personal</p>
+            </section>
+        <div class="contenedor-tarjetas">
+            <section>
+                <h2 class="tituloSecundario textoSecundario">PRINCIPALES OFERTAS</h2>
+
+                <div class="card-container">
+
+                <article class="product-borrar-despues">
+                    <div><img src="../img/productos/Amatista.jpeg" alt="amatista" width="300"></div>
+                    Éste es un botón falso
+                    <div class="fakeButtons">
+                        <label id="mostrarProducto1Label" for="mostrarProducto1">Detalles</label>
+                        <input type="checkbox" id="mostrarProducto1">
+
+                        <div class="detalleProducto1">
+                            <div id="producto1" class="divDescription">
+                                <div><img src="../img/productos/Amatista.jpeg" alt="amatista" width="600"></div>
+                                <h1>AMATISTA</h1>
+                                <p>Amatistum mineralis</p>
+                                <p>$4500</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error itaque inventore ratione earum dicta magnam explicabo sunt voluptate, aliquam similique consequatur obcaecati ipsum iste, ipsam vero ea non dolore id!</p>
+                                <button class="btn text-dark"><a href="./testdetailsnojs.html">Cerrar detalle</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                    </div>
+                </section>    
+        </div>
+
+
+
+        </main>
+
+        
+    
+        <!-- <aside>
+            Si hay tiempo revisar cómo encajarlo.
+            Acá iría un aside, convendría un menú desplegable al hacer hover. dejarlo con un 1% de ancho.
+                Revisar qué andaría bien para un e-shop.
+        </aside> -->
+
+        <footer id="footer">
+            <div>
+                Sitio desarrollado por Juan Gaspar Nagy <icon>Github</icon>
+                <div><a href="../index.html">Volver a la página principal</a></div>
+                <div class="anuncio">
+                    <!--para que respete los dos renglones los span están con display block, considerar
+                    si se cambia el elemento.-->
+                    <span>Más de 800.000.000.000. de personas reales ya compran diariamente en este sitio.</span>
+                    <span>Vos también podés.</span>
+                </div>
+            </div>
+            <center id="statusElement">...</center>
+        </footer>
+        <a href="#main" title="click aquí para volver arriba"><img class="volverArriba" alt="volverArriba" src="../img/up-arrow.png"></a>
+            <!--         RECORDAR 
+
+            RECORDAR USAR EN LAS IMG VIEW RELATIVO Y NO EN PIXELS
+
+            ME gusta la idea de un botoncito que aparezca cuando se baja, para volver arriba
+
+            y otro que despilegue la navbar 
+            
+            PONERLE TITLE A LOS ELEMENTOS QUE ME GUSTARÍA QUE TENGAN UNA PEQUEÑA DESCRIPCIÓN AL POSAREL PUNTERO
+            COMO LA FLECHITA DE VOLVER ARRIBA
+            -->
+        <script src="../js/titleanim.js"></script>        
+    </body>
+</html>

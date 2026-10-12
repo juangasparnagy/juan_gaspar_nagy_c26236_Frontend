@@ -1,0 +1,399 @@
+
+
+/*primero removemos los estilos que interfieren con posicionamiento*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+/* ajusto el tamaño base de las fuentes para que sea más fácil calcular los rem y em*/
+/* TODO EL DOCUMENTO */
+html{
+    font-size: 62.5%;
+}
+/* BODY (por orden de aparición)*/
+body{
+    font-size: 2rem;
+    background-color: rgba(214, 165, 231, 0.8);
+    font-family: 'Segoe UI', sans-serif;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    align-content: center;
+}
+/* contraste para el fondo con imagen */
+body, main, section, article{
+    text-shadow: 1px 1px 0.5pt white;
+    backdrop-filter: blur(10px)
+}
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: 100vw;
+    min-height: 15vh;
+    max-height: 15vh;
+    z-index: 10;
+}
+.logo-container{
+    min-height: 10vh;
+    background-color: rgba(137, 43, 226);
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    /* gradiente es vertical, para ponerlo en horizontal lo giro 90 grados con 90deg, recordar. */
+    background: linear-gradient(90deg, rgba(137, 43, 226),black, black,rgba(137, 43, 226) )
+}
+.logo-container img{
+    max-height: 10vh;
+}
+.logo-container:hover{
+    color:red;
+    outline: 2px solid gold;
+}
+
+.miNav nav{
+    min-width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.miNav ul{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(114, 240, 240);
+  justify-content: space-evenly;
+}
+
+.miNav ul li{
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.miNav ul li div{
+    align-content: center;
+}
+
+.miNavDiv{
+    min-height: 10vh;
+}
+/*Tuve que hacer esto porque no aplica estilo de a, por alguna razón*/
+.miNavDiv:hover{
+    color:red;
+    background-color: blue;
+    outline: 2px solid gold;
+    text-decoration: none;
+}
+
+.subBody{
+    padding-top: 15vw;
+    padding-bottom: 10vw;
+    font-size: 2rem;
+    background-color: rgba(214, 165, 231, 0.8);
+    background-image: url("../img/Bismuth_crystal_macro.jpg");
+    font-family: 'Segoe UI', sans-serif;
+    
+    background-size: cover;
+    
+    /* no se usa por ahora
+    background-position: no-repeat;
+    background-repeat: cover;
+     */
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 0;
+    align-content: center;
+    color: black;
+}
+.subBodyBackup{
+    padding-top: 15vw;
+    padding-top: 10vw;
+    font-size: 2rem;
+    background-color: rgba(214, 165, 231, 0.8);
+    background-image: url("../img/Bismuth_crystal_macro.jpg");
+    font-family: 'Segoe UI', sans-serif;
+    
+    background-size: cover;
+    
+    /* no se usa por ahora
+    background-position: no-repeat;
+    background-repeat: cover;
+     */
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 0;
+    align-content: center;
+    color: black;
+}
+main{
+    width: 85%;
+    margin: auto;
+    padding-top: 25vh;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+/* body{
+    display: flex;
+    flex-direction: column;
+} */
+
+.inicio p{
+    text-align: center;
+}
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+.card{
+    background-color: rgba(239, 208, 250, 0.589);
+    /* Lncho basado en el tamaño del texto. Considerar luego si camvia a vw */
+    width: 40rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+
+}
+.card img{
+    width: 100%;
+}
+.text-dark{
+    color: black;
+}
+.btn{
+    border:solid;
+    border-radius: 1rem;
+    background-color: lawngreen;
+    cursor: pointer
+}
+.btn:hover{
+    background-color: aqua;
+    outline: 2px solid gold;
+}
+.btn:active{
+    color: gold;
+    background-color: blue;
+}
+.fakeButtons{
+    border:solid;
+    border-radius: 1rem;
+    background-color: lawngreen;
+    cursor: pointer
+}
+.fakeButtons:hover{
+    background-color: aqua;
+    outline: 2px solid gold;
+}
+.btfakeButtons:active{
+    color: gold;
+    background-color: blue;
+}
+a{
+    text-decoration: none;
+/*Esto es redundante para los <a>, pero lo dejo para recordarlo en otra cosa*/
+    cursor: pointer;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover{
+    color:red;
+    background-color: blue;
+    outline: 2px solid gold;
+    text-decoration: none;
+/*Esto es redundante para los <a>, pero lo dejo para recordarlo en otra cosa*/
+}
+ul{
+    list-style: none;
+}
+ol{
+    list-style: none;
+}
+footer{
+    min-width: 100vw;
+    max-height: 5vh;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(137, 43, 226),black, black,rgba(137, 43, 226))
+}
+#footer a{
+    text-decoration: none
+}
+
+h1{
+    margin: 2rem 0;
+    text-align: center;
+}
+h2, h3{
+    margin: 1rem 0rem;
+    text-align: center
+}
+
+
+.tituloPrimario{
+    color: blue;
+    
+}
+.tituloSecundario{
+    color: rgb(79, 79, 200);
+    text-align: center;
+}
+.textoSecundario{
+    font-family: 'Courier New', Courier, monospace;
+}
+.text-dark{
+    color:black;
+    text-shadow: 1px 1px 0.5pt white;
+    backdrop-filter: blur(10px)
+}
+
+/* FLECHITA PARA VOLVER ARRIBA*/
+.volverArriba{
+    opacity: 30%;
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    bottom: 10%;
+    left: 90%;
+    /* Extrañamente está tomando el z-index a pesar de que no creé ningún contexto de 
+    overlap que enseña midu dev en su curso de flex */
+    z-index: 19;
+}
+.volverArriba:hover{
+cursor:pointer;
+}
+.anuncio{
+    display: block;
+    align-items: center;
+}
+.anuncio span{
+    font-size: 1rem;
+    /* max-width: 75vw; */
+    text-align: center;
+    /*para que respete el siguiente renglón*/
+    display: block;
+    
+}
+
+/* FORMULARIO */
+/*para mayor visibilidad al interactuar en focus*/
+
+.escondido{
+    display:none;
+}
+.revelado{
+    display:inline;
+}
+#form-contact{
+    background-color: rgba(239, 208, 250, 0.589);
+}
+#form-job{
+    background-color: rgba(239, 208, 250, 0.589);
+}
+#form-job input:focus, textarea:focus, select:focus{
+    outline: 2px solid blue;
+    background-color: rgb(252, 248, 177);
+}
+#form-contact input:focus, textarea:focus, select:focus{
+    outline: 2px solid blue;
+    background-color: rgb(252, 248, 177);
+}
+
+
+/* BORRAR */
+/* 
+--IGNORAR--
+ESTO ES DE EL DESAFÍO DE MOSTRAR DETALLES DEL PRODUCTO SIN USAR JS. 
+*/
+
+.product-borrar-despues{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#mostrarProducto1,
+.detalleProducto1 {
+  display: none;
+  z-index: 0;
+}
+
+#mostrarProducto1:checked + .detalleProducto1 {
+  /* width: 75vw;
+  height: 75vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  /* inset: 0; 
+  margin-inline: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  position: fixed;
+  /* inset: 0; */
+  top: 25%;
+  left: 0;
+  margin-left: -40vw;
+  margin-top: -50vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  /* background-color:white; */
+  background: linear-gradient(90deg, rgba(137, 43, 226),white, white,rgba(137, 43, 226) );
+  font-size: large;
+}
+
+#mostrarProducto1:checked + .detalleProducto1 p{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 3rem;
+}
+
+#mostrarProducto1Label:hover{
+    cursor: pointer;
+    outline: 2px solid gold;
+}
+
+@media (max-width: 1599px){
+    #mostrarProducto1:checked + .detalleProducto1{
+        top: -100%;
+        margin-top: -50vh;
+    }
+    #mostrarProducto1:checked + .detalleProducto1 p::after{
+        content: ", con mq1599px"
+    }
+}
+
+

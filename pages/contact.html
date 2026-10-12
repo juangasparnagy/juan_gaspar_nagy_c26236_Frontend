@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/icon2.png">
+    <title>Contacto</title>
+</head>
+<body>
+    <header id="paheader" class="header">
+        <a href="../index.html"><div class="logo-container"><img src="../img/LogoTemp2.png" alt="Logo"></div></a>
+        
+        <!-- USO DIVS adentro de li para que sea más fácil clickear o usar la llema del dedo,
+         dispensando de presición.
+        
+        Si alcanza el tiempo hacer la nav con divs, sin ul para que ocupen
+         todo el ancho visual -->
+            <nav class="miNav">
+                <ul>
+                    <li><a href="../index.html"><div class="miNavDiv">Inicio</div></a></li>
+                    <li><a href="./products.html"><div class="miNavDiv">Productos</div></a></li>
+                    <li><a href="./contact.html"><div class="miNavDiv">Contacto</div></a></li>
+                    <li><a href="./about.html"><div class="miNavDiv">Quienes somos</div></a></li>
+                    <li><a href="./job.html"><div class="miNavDiv">Trabaja con nosotros</div></a></li>
+                    <li><a href="./testdetailsnojs.html"><div class="miNavDiv">Test Sin JS</div></a></li>
+                </ul>
+            </nav>
+    </header>
+    <hr>
+    <main>
+        
+        <form id="form-contact" action="Acá falta lo de formspree" >
+            <fieldset>
+                <legend>Información Personal</legend>
+                
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="1100009999">
+            </fieldset>
+            
+            <fieldset>
+                <label for="motivo">Motivo:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="">-- Seleccioná una opción --</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="soporte">Soporte</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <input class="escondido" name="otrosmotivos" id="otrosmotivos" placeholder="otrosmotivos">
+                
+                <div>
+                    <div><label for="mensaje" >Mensaje:</label></div>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea></div>
+        </fieldset>
+
+        </form>
+    </main>
+    
+
+    <hr>
+    <footer id="footer">
+        <div>
+            Sitio desarrollado por Juan Gaspar Nagy <icon>Github</icon>
+            <div><a href="../index.html">Volver a la página principal</a></div>
+            <div class="anuncio">
+                <!--para que respete los dos renglones los span están con display block, considerar
+                si se cambia el elemento.-->
+                <span>Más de 800.000.000.000. de personas reales ya compran diariamente en este sitio.</span>
+                <span>Vos también podés.</span>
+            </div>
+        </div>
+        <center id="statusElement">...</center>
+    </footer>
+    <script src="../js/titleanim.js"></script>
+    <script src="../js/contactform.js"></script>
+</body>
+</html>
