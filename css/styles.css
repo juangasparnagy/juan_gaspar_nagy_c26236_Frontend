@@ -88,32 +88,25 @@ body, main, section, article{
 }
 
 .subBody{
-    padding-top: 15vw;
-    padding-bottom: 10vw;
+    padding-top: 20vh;
+    /* no se usa a menos que decida fixed para footer */
+    /* padding-bottom: 10vw; */
     font-size: 2rem;
     background-color: rgba(214, 165, 231, 0.8);
     background-image: url("../img/Bismuth_crystal_macro.jpg");
     font-family: 'Segoe UI', sans-serif;
-    
     background-size: cover;
-    
-    /* no se usa por ahora
-    background-position: no-repeat;
-    background-repeat: cover;
-     */
     background-attachment: fixed;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     z-index: 0;
     align-content: center;
-    color: black;
 }
 .subBodyBackup{
-    padding-top: 15vw;
-    padding-top: 10vw;
+    padding-top: 15vh;
+    padding-top: 10vh;
     font-size: 2rem;
     background-color: rgba(214, 165, 231, 0.8);
     background-image: url("../img/Bismuth_crystal_macro.jpg");
@@ -138,7 +131,6 @@ body, main, section, article{
 main{
     width: 85%;
     margin: auto;
-    padding-top: 25vh;
     padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
@@ -395,5 +387,13 @@ ESTO ES DE EL DESAFÍO DE MOSTRAR DETALLES DEL PRODUCTO SIN USAR JS.
         content: ", con mq1599px"
     }
 }
-
-
+@media (max-width: 624px){
+    .subBody{
+        padding-top: 30vh;
+    }
+}
+@media (max-width: 352px){
+    .subBody{
+        padding-top: 40vh;
+    }
+}
