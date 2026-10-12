@@ -28,40 +28,49 @@
             </nav>
     </header>
     <hr>
-    <main>
-        
-        <form id="form-contact" action="Acá falta lo de formspree" >
-            <fieldset>
-                <legend>Información Personal</legend>
-                
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" required>
-
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" name="telefono" id="telefono" placeholder="1100009999">
-            </fieldset>
+    <div class="subBody">
+        <main>
             
-            <fieldset>
-                <label for="motivo">Motivo:</label>
-                <select id="motivo" name="motivo" required>
-                    <option value="">-- Seleccioná una opción --</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="soporte">Soporte</option>
-                    <option value="otros">Otros</option>
-                </select>
-                <input class="escondido" name="otrosmotivos" id="otrosmotivos" placeholder="otrosmotivos">
-                
-                <div>
-                    <div><label for="mensaje" >Mensaje:</label></div>
-                    <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea></div>
-        </fieldset>
+            <form id="form-contact" action="https://formspree.io/f/xppqjbdz" method="POST">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required>
 
-        </form>
-    </main>
-    
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="1100009999">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="motivo">Motivo:</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="">-- Seleccioná una opción --</option>
+                        <option value="consulta">Consulta</option>
+                        <option value="soporte">Soporte</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <input class="escondido" name="otrosmotivos" id="otrosmotivos" placeholder="otrosmotivos">
+                    
+                    <div>
+                        <div><label for="mensaje" >Mensaje:</label></div>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea></div>
+            </fieldset>
+            <fieldset>
+                <button class="btn text-dark">Enviar</button>
+                <button class="btn text-dark">Borrar</button>
+            </fieldset>
+            <fieldset>
+                <p>Este formulario está administrado por un servicio externo.</p>
+                <p>Se actualizará la página al enviar.</p>
+                <p>Tendrá que volver hacia atrás para seguir en nuestro sitio</p>
+            </fieldset>
+            </form>
+        </main>
+    </div>
 
     <hr>
     <footer id="footer">
